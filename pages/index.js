@@ -57,7 +57,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1>Mukhdarshani Meet. A Anuvdini AI Product</h1>
+          <h1>Mukhdarshani Meet.</h1>
+          <h2>An Anuvadini AI Product</h2>
           <p className={styles.subtitle}>
             We have built the online meeting service for secure business meetings and peronal meetings. It is free and available for all.
           </p>
