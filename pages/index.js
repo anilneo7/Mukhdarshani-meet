@@ -138,7 +138,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <h1>Premium video meetings. Now free for everyone.</h1>
+          <h1>Mukhdarshani Meet</h1>
           <h2>An Anuvadini AI Product</h2>
           <p className={styles.subtitle}>
             We've built the online meeting service for secure business and personal meetings.

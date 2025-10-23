@@ -1,16 +1,112 @@
 .copyContainer {
-  @apply flex flex-col absolute text-white border border-white rounded p-2;
-  left: 30px;
-  bottom: 100px;
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 100;
+  max-width: 320px;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  opacity: 1;
+}
 
-  hr {
-    @apply my-1;
-  }
-  .copyHeading {
-    @apply text-base;
-  }
+.copyContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+}
 
-  .copyDescription {
-    @apply flex items-center text-sm;
-  }
+.copyHeading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4C00FF;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copyHeading::before {
+  content: '🔗';
+  font-size: 1rem;
+}
+
+.copyDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f5ff;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #e9e1ff;
+}
+
+.copyDescription span {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8125rem;
+  color: #1a1a2e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 0.5rem;
+}
+
+.copyButton {
+  background: #f0e8ff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #4C00FF;
+  flex-shrink: 0;
+}
+
+.copyButton:hover {
+  background: #e2d5ff;
+  transform: translateY(-1px);
+}
+
+.copyButton:active {
+  transform: translateY(0);
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltipText {
+  visibility: hidden;
+  width: 80px;
+  background-color: #4C00FF;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
 }
