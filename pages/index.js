@@ -142,7 +142,7 @@ export default function Home() {
           <h2>An Anuvadini AI Product</h2>
           <p className={styles.subtitle}>
             We've built the online meeting service for secure business and personal meetings.
-            It's free, secure, and available to everyone.
+            It's free, secure and available to everyone.
           </p>
         </motion.div>
 

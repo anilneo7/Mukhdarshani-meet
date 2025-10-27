@@ -11,7 +11,7 @@
   --card-bg: rgba(255, 255, 255, 0.95);
   --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,14 +24,29 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .container::before {
@@ -345,9 +360,26 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-  20%, 40%, 60%, 80% { transform: translateX(2px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
 }
 
 .errorText {
@@ -362,7 +394,9 @@
 
 /* Loading animation */
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loading {
@@ -396,15 +430,15 @@
   .hero h1 {
     font-size: 2.75rem;
   }
-  
+
   .hero h2 {
     font-size: 1.25rem;
   }
-  
+
   .subtitle {
     font-size: 1.1rem;
   }
-  
+
   .card {
     padding: 2rem 1.5rem;
   }
@@ -414,12 +448,12 @@
   .hero h1 {
     font-size: 2.25rem;
   }
-  
+
   .card {
     padding: 1.75rem 1.25rem;
     border-radius: 12px;
   }
-  
+
   .button {
     padding: 1rem 1.5rem;
   }
@@ -429,12 +463,12 @@
   .inputGroup {
     flex-direction: row;
   }
-  
+
   .button {
     width: auto;
     min-width: 120px;
   }
-  
+
   .hero h1 {
     font-size: 2.75rem;
   }
@@ -442,9 +476,17 @@
 
 /* Animation for loading state */
 @keyframes pulse {
-  0% { opacity: 0.6; }
-  50% { opacity: 1; }
-  100% { opacity: 0.6; }
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
 }
 
 .button:disabled {
